@@ -16,10 +16,20 @@
 </div>
 
 <div class="row">
-  <%= image_tag("1_9.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>        
-  <div class="col col-md-2 mt-4">
-    <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-block btn-drop btn-lg effect-btn" %>
-  </div>
+  <%= image_tag("1_9.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
+  <% if user_signed_in? %>        
+    
+    <div class="col col-md-2 mt-4">
+      <%= link_to "My Dashboard", root_path, class: "btn btn-block btn-drop btn-lg effect-btn" %>
+    </div> 
+
+  <% else %>
+    
+    <div class="col col-md-2 mt-4">
+      <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-block btn-drop btn-lg effect-btn" %>
+    </div>
+
+  <% end %>
   <div class="col col-md-2 mt-4">
     <%= link_to "Shop Brands", brands_path, class: "btn btn-block btn-trial btn-lg effect-btn" %>
   </div>
