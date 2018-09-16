@@ -1,0 +1,71 @@
+<div class="row home_top_margin">
+  <%= image_tag("1_1.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>  
+  <%= image_tag("1_3.jpg", :class => "col col-md-4 column_width_manager") %>
+  <%= image_tag("2_1.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
+</div>
+
+<div class="row">
+  <%= image_tag("1_2.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
+  <div class="col col-md-4">
+    <h2 align="center">DropAlley</h2>
+    <h6 align="center">We combine online and offline retail to give you the most convenient shopping experience.</h6>
+    <h4 align="center">Try & Buy</h4>
+    <h6 align="center"> Products brought to you whenever  and wherever you want so you can TRY before you BUY.</h6>
+  </div>        
+  <%= image_tag("1_6.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
+</div>
+
+<div class="row">
+  <%= image_tag("1_9.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>        
+  <div class="col col-md-2 mt-4">
+    <%= link_to "Sign-up", root_path, class: "btn btn-block btn-drop btn-lg effect-btn" %>
+  </div>
+  <div class="col col-md-2 mt-4">
+    <%= link_to "Shop Brands", root_path, class: "btn btn-block btn-trial btn-lg effect-btn" %>
+  </div>
+  <%= image_tag("1_7.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
+</div>
+
+<div class="row mt-5 p-3">
+  <div class="col col-md-12">
+    <h2 class="the_underline" align="center">How It Works</h2>
+  </div>
+</div>
+
+<div class="row mt-3 mb-5">
+  <div class="col-md-12 d-block mx-auto">
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/HL-NPWwXtx8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="col-md-4 mt-4">
+    <h1 class="the_underline" align="center">01</h1>
+    <h3 align="center">Discover Products</h3>
+    <h4 align="center">Find your favorite brands for Try & Buy</h4>
+  </div>
+
+  <div class="col-md-4 mt-4">
+    <h1 class="the_underline" align="center">02</h1>
+    <h3 align="center">Select Products</h3>
+    <h4 align="center">Select the products you want to try</h4>
+  </div>
+
+  <div class="col-md-4 mt-4">
+    <h1 class="the_underline" align="center">03</h1>
+    <h3 align="center">Request A Trial</h3>
+    <h4 align="center">Fill in your details and paste product links</h4>
+  </div>
+
+</div>
+
+<div class="row mt-5 mb-5">
+   <div class="col col-md-8 offset-md-2">
+     <div class="outerbox_signup p-5 effect1">
+       <div class="innerbox_signup">
+         <h2 align="center">What Are You Waiting For?</h2>
+         <h4 class="mb-5" align="center"> By signing up you will receive the latest updates on what products and brands you can try out before you buy.</h4>
+         <%= link_to "Sign-up", root_path, class: "btn btn-block btn-lg btn-drop" %>
+       </div>
+     </div>
+   </div> 
+</div>
+
+<%= render 'layouts/footer' %>

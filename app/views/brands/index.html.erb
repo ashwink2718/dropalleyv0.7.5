@@ -1,0 +1,29 @@
+<div class="row brands_top_margin">
+	<div class="jumbotron effect1 jumbobg">
+	  <h1 align="center">Browse Brands</h1>
+
+		  <p class="lead" align="center">Shop at your favorite brands. When you know what you'd like to try, copy/paste the product link via the request button below.</p>
+		  <hr class="my-4">
+		  <div class="row">
+		  	<div class="col-md-6 offset-md-3">
+		  		<%= link_to "Request a Try & Buy", root_path, class: "btn btn-trial btn-block cta_btn effect-btn my-2 my-sm-0" %>
+		  	</div>
+		  </div>
+		  <div class="row mt-4">
+		  	<div align="center" class="col-md-12">
+		  		<p>*Note: No purchase is made at this point! Make sure not to purchase on the retailer's site. You can purchase products through our delivery representative after you’ve tried them on and decided you want to keep them.</p>
+		  	</div>
+		  </div> 
+
+	</div>
+</div>
+
+<div class="row">
+	<% @brands.each do |brand| %>
+		<div class="col-md-3">
+			<%=link_to image_tag(brand.image.url, class:" d-block mx-auto" ), brand.brand_link, target:"_blank" %>
+		</div>
+	<% end %>	
+</div>
+
+<%= render 'layouts/footer' %>

@@ -1,0 +1,26 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar-bottom-shadow">
+  
+  <div class="container-fluid">
+  
+  <%= link_to image_tag("logo.png", class:"navlogo"), root_path, class: "navbar-brand" %>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+      <%= link_to "Shop Brands", brands_path, class: "navbar-nav mr-auto nav-link links" %>  
+      
+
+      <%= link_to "How It Works", "https://www.youtube.com/watch?v=HL-NPWwXtx8", class: "nav-link links", target: "_blank" %>
+      
+      <%= link_to "Request A Try & Buy", root_path, class: "btn btn-trial effect-btn my-2 my-sm-0" %>
+        
+      <%= link_to "Login", root_path, method: :delete, class: "nav-link links" %>
+        
+    </div>
+
+  </div>
+
+</nav>
