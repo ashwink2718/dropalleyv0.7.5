@@ -18,10 +18,10 @@
 <div class="row">
   <%= image_tag("1_9.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>        
   <div class="col col-md-2 mt-4">
-    <%= link_to "Sign-up", root_path, class: "btn btn-block btn-drop btn-lg effect-btn" %>
+    <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-block btn-drop btn-lg effect-btn" %>
   </div>
   <div class="col col-md-2 mt-4">
-    <%= link_to "Shop Brands", root_path, class: "btn btn-block btn-trial btn-lg effect-btn" %>
+    <%= link_to "Shop Brands", brands_path, class: "btn btn-block btn-trial btn-lg effect-btn" %>
   </div>
   <%= image_tag("1_7.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
 </div>
@@ -62,7 +62,7 @@
        <div class="innerbox_signup">
          <h2 align="center">What Are You Waiting For?</h2>
          <h4 class="mb-5" align="center"> By signing up you will receive the latest updates on what products and brands you can try out before you buy.</h4>
-         <%= link_to "Sign-up", root_path, class: "btn btn-block btn-lg btn-drop" %>
+         <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-block btn-lg btn-drop" %>
        </div>
      </div>
    </div> 

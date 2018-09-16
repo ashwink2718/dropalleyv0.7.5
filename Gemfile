@@ -31,6 +31,7 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'rails_admin', '~> 1.3'
+gem 'devise'
 
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
