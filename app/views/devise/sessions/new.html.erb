@@ -27,13 +27,6 @@
         </div>
       </div>    
 
-      <% if devise_mapping.rememberable? -%>
-        <div class="form-group">
-          <%= f.check_box :remember_me, class: "form-group" %>
-          <%= f.label :remember_me %>
-        </div>
-      <% end -%>
-
       <div class="form-group">
         <%= f.submit "Log in", class: "btn btn-drop btn-block btn-lg effect-btn" %>
       </div>
