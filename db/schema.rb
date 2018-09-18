@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_16_231325) do
+ActiveRecord::Schema.define(version: 2018_09_18_085402) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,21 @@ ActiveRecord::Schema.define(version: 2018_09_16_231325) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "brand"
+    t.string "color"
+    t.string "size"
+    t.string "main_img"
+    t.string "img1"
+    t.string "img2"
+    t.string "img3"
+    t.string "img4"
+    t.string "img5"
+    t.decimal "price"
   end
 
   create_table "users", force: :cascade do |t|

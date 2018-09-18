@@ -1,0 +1,18 @@
+<div class="row brands_top_margin">
+	<div class="col col-md-12">
+		<h1 align="center">Here are all the products</h1>		
+	</div>
+</div>
+
+<div class="row mt-5">
+	<% @products.each do |product| %>
+		<div class="col-md-4">
+			<%= image_tag product.main_img.url, class: "col-md-12" %>
+			<%= link_to "View Product", product_path(product) %>
+		</div>	
+
+	<% end %>
+</div>
+
+
+	
