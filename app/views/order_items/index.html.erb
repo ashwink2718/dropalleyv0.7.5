@@ -6,7 +6,7 @@
 
 <% @items.each do |item| %>
 
-  <div class="row">
+  <div class="row mt-3">
     <div class="col-md-3">
       <%= image_tag item.product.main_img.url, class: "img-fluid" %>
     </div>
@@ -16,32 +16,26 @@
     <div class="col-md-3">
       <h3>€ <%= item.price %></h3>
     </div>
+    <div class="col-md-2">
+      <%= form_for item, method: :delete do |f| %>
+        <%= f.submit "Remove", class: "btn btn-drop" %>
+      <% end %>
+    </div>
   </div>
 
 <% end %>
 
+<div class="row mt-5">
+  <div class="col-md-12">
+    <h2 align="right">Order Subtotal</h2>
+    <hr>
+    <h3 align="right">Subtotal: € <%= current_cart.order.sub_total %></h3>
+    <hr>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <td>Product</td>
-      <td>Title</td>
-      <td>Price</td>
-      <td></td>
-    </tr>
-  </thead>
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= image_tag item.product.main_img.thumb.url %></td>
-        <td><%= item.product.title %></td>
-        <td><%= item.price %></td>
-        <td>
-          <%= form_for item, method: :delete do |f| %>
-            <%= f.submit "Remove" %>
-          <% end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-3 offset-md-9">
+    <%= link_to "Continue", checkout_path, class: "btn btn-drop btn-block btn-lg" %>
+  </div>
+</div>

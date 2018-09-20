@@ -1,0 +1,20 @@
+<div class="row brands_top_margin">
+	<div class="col-md-12">
+		<h3 align="center">Enter Your Details</h3>
+	</div>
+</div>
+
+<div class="row">
+	<%= form_for @order, url: checkout_path do |f| %>	
+		<div class="md-col-6">
+			<div class="form-group">
+				<%= f.label :name %>
+				<%= f.text_field :name %>
+			</div>
+
+			<div class="form-group">
+				<%= f.submit "Checkout" %>
+			</div>
+		</div>
+	<% end %>
+</div>
