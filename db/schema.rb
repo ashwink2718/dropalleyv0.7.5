@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_19_145244) do
+ActiveRecord::Schema.define(version: 2018_09_19_165202) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,32 @@ ActiveRecord::Schema.define(version: 2018_09_19_145244) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.integer "quantity", default: 0, null: false
+    t.decimal "price", precision: 15, scale: 2, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "order_id"
+    t.integer "product_id"
+    t.index ["order_id"], name: "index_order_items_on_order_id"
+    t.index ["product_id"], name: "index_order_items_on_product_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "name"
+    t.string "street"
+    t.string "door"
+    t.string "city"
+    t.string "zipcode"
+    t.string "phone"
+    t.string "order_icon"
+    t.string "order_msg"
+    t.decimal "sub_total", precision: 15, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "token"
   end
 
   create_table "products", force: :cascade do |t|
