@@ -7,12 +7,12 @@
 <div class="row mt-5">
 	<% @products.each do |product| %>
 		<div class="col-md-4">
-			<%= image_tag product.main_img.url, class: "col-md-12" %>
-			<%= link_to "View Product", product_path(product) %>
+			<div class="product_block effect1">
+				<%= image_tag product.main_img.url, class: "col-md-12" %>
+			<%= link_to "View Product", product_path(product), class:"btn btn-drop" %>	
+			</div>
+			
 		</div>	
 
 	<% end %>
 </div>
-
-
-	

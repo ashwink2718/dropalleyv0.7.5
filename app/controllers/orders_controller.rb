@@ -6,6 +6,8 @@ class OrdersController < ApplicationController
 
 	def new
 		@order = current_cart.order
+		@order.name = current_user.name
+		@order.email = current_user.email
 	end
 
 	def create
@@ -22,7 +24,7 @@ class OrdersController < ApplicationController
 	private
 
 		def order_params
-			params.require(:order).permit(:name, :street, :door, :city, :zipcode, :phone, :order_icon, :order_msg)			
+			params.require(:order).permit(:name, :street, :door, :city, :zipcode, :phone, :order_icon, :order_msg, :email)			
 		end
 
 end
