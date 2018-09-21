@@ -17,6 +17,7 @@
 
 <div class="row">
   <%= image_tag("1_9.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
+
   <% if user_signed_in? %>        
     
     <div class="col col-md-2 mt-4">
@@ -66,16 +67,35 @@
 
 </div>
 
-<div class="row mt-5 mb-5">
-   <div class="col col-md-8 offset-md-2">
-     <div class="outerbox_signup p-5 effect1">
-       <div class="innerbox_signup">
-         <h2 align="center">What Are You Waiting For?</h2>
-         <h4 class="mb-5" align="center"> By signing up you will receive the latest updates on what products and brands you can try out before you buy.</h4>
-         <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-block btn-lg btn-drop" %>
-       </div>
-     </div>
-   </div> 
-</div>
+
+<% if user_signed_in? %>        
+    
+    <div class="row mt-5 mb-5">
+       <div class="col col-md-8 offset-md-2">
+         <div class="outerbox_signup p-5 effect1">
+           <div class="innerbox_signup">
+             <h2 align="center">Welcome to DropAlley</h2>
+             <h4 class="mb-5" align="center"> Your dashboard is your very own special area on the site. Click on the button below to check it out.</h4>
+             <%= link_to "My Dashboard", root_path, class: "btn btn-block btn-lg btn-drop" %>
+           </div>
+         </div>
+       </div> 
+    </div>
+
+<% else %>
+
+    <div class="row mt-5 mb-5">
+       <div class="col col-md-8 offset-md-2">
+         <div class="outerbox_signup p-5 effect1">
+           <div class="innerbox_signup">
+             <h2 align="center">What Are You Waiting For?</h2>
+             <h4 class="mb-5" align="center"> By signing up you will receive the latest updates on what products and brands you can try out before you buy.</h4>
+             <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-block btn-lg btn-drop" %>
+           </div>
+         </div>
+       </div> 
+    </div>
+
+<% end %>
 
 <%= render 'layouts/footer' %>
