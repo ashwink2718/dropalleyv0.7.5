@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_20_210951) do
+ActiveRecord::Schema.define(version: 2018_09_22_151903) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 2018_09_20_210951) do
     t.string "city"
     t.string "zipcode"
     t.string "phone"
-    t.string "order_icon"
-    t.string "order_msg"
+    t.string "order_icon", default: "envelope-open"
+    t.string "order_msg", default: "Order Received"
     t.decimal "sub_total", precision: 15, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

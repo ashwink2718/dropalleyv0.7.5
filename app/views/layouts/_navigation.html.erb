@@ -12,13 +12,13 @@
       
 
       <%= link_to "Shop Brands", brands_path, class: "navbar-nav ml-auto nav-link links" %>  
-      <%= link_to "Browse Products", products_path, class: "navbar-nav nav-link links" %>
+      <%= link_to "Custom Try & Buy", root_path, class: "navbar-nav nav-link links" %>
 
       <%= link_to "How It Works", "https://www.youtube.com/watch?v=HL-NPWwXtx8", class: "nav-link links", target: "_blank" %>
 
       <% if user_signed_in? %>
 
-        <%= link_to "Request A Try & Buy", root_path, class: "btn btn-trial btn-lg effect-btn my-2 my-sm-0" %>
+        <%= link_to "Try & Buy Now", products_path, class: "btn btn-trial btn-lg effect-btn my-2 my-sm-0" %>
       
         <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link links" %>
           
