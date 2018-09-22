@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
 
 	def index
 		@orders = Order.all
+		@custom_orders = CustomOrder.all
 	end
 
 	def new

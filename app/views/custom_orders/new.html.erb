@@ -1,0 +1,137 @@
+<div class="row mt-5">
+  <%= image_tag("signupheader.png", :class => "col col-md-8 offset-md-2 col-sm-12 col-xs-12 mt-4 d-none d-sm-block col-sm-12") %>
+</div>
+
+
+<div class="row margin_for_sign_up">
+
+  <div class="col-md-4">
+    <h1 class="the_underline" align="center">01</h1>
+    <h3 align="center">Discover Products</h3>
+    <h4 align="center">Find your favorite brands for Try & Buy</h4>
+  </div>
+
+  <div class="col-md-4">
+    <h1 class="the_underline" align="center">02</h1>
+    <h3 align="center">Select Products</h3>
+    <h4 align="center">Select the products you want to try</h4>
+  </div>
+
+  <div class="col-md-4">
+    <h1 class="the_underline" align="center">03</h1>
+    <h3 align="center">Request A Trial</h3>
+    <h4 align="center">Fill in your details and paste product links below</h4>
+  </div>
+
+</div>
+
+
+<div class="row mt-5">
+  <div class="col-md-12">
+    <h5 align="center">Personal Information</h5>
+  </div>
+</div>
+
+<%= form_for(@custom_order, :html => {class: "form", role: "form"}) do |f| %>
+  <div class="form-row mt-2">
+    <div class="form-group col-md-6">
+      <%= f.text_field :name, class: "form-control", placeholder: "Full Name" %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= f.email_field :email, class: "form-control", placeholder: "Email", readonly: "true" %>
+    </div>
+  </div>
+
+  <div class="form-row">    
+    <div class="form-group col-md-6">
+      <%= f.text_field :street, class: "form-control", placeholder: "Street" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.text_field :door, class: "form-control", placeholder: "Apartment" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.text_field :city, class: "form-control", placeholder: "City" %>
+    </div>
+  </div>
+
+  <div class="form-row">
+    
+    <div class="form-group col-md-3">
+      <%= f.text_field :zipcode, class: "form-control", placeholder: "Zipcode" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.text_field :phone, class: "form-control", placeholder: "Mobile Number" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h5 align="center">Product Information</h5>
+    </div>
+  </div>
+
+  <div class="form-row mt-2">
+    <div class="form-group col-md-9">
+      <%= f.text_field :product1, class: "form-control", placeholder: "Product Link" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.text_field :size1, class: "form-control", placeholder: "Size" %>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-9">
+      <%= f.text_field :product2, class: "form-control", placeholder: "Product Link" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.text_field :size2, class: "form-control", placeholder: "Size" %>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-9">
+      <%= f.text_field :product3, class: "form-control", placeholder: "Product Link" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.text_field :size3, class: "form-control", placeholder: "Size" %>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-9">
+      <%= f.text_field :product4, class: "form-control", placeholder: "Product Link" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.text_field :size4, class: "form-control", placeholder: "Size" %>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-9">
+      <%= f.text_field :product5, class: "form-control", placeholder: "Product Link" %>
+    </div>
+    <div class="form-group col-md-3">
+      <%= f.text_field :size5, class: "form-control", placeholder: "Size" %>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <%= f.text_area :comment, class: "form-control", placeholder: "Special Requests" %>
+    </div>
+  </div>
+
+  <%= f.submit "Submit Your Try & Buy Request", class: "btn btn-drop btn-block btn-lg effect-btn mb-5" %>
+
+<% end %>
+
+<div class="row mb-3">
+  <div class="col-md-7">
+    <p><strong>Try & Buy is currently a free service. No purchase required. Simply buy products directly from our delivery partner once you try them and like them.</strong></p>
+  </div>
+  <div class="col-md-3 offset-md-2 mt-4">
+    <p>Still need help? <%= mail_to "contact@dropalley.com", "Contact Us" %></p>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>

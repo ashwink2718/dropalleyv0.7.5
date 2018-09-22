@@ -49,4 +49,46 @@
 
 </div>
 
+<div class="row">
+	<div align="center" class="col-md-12">
+		<h1 class="brands_top_margin">Custom Try & Buy Orders</h1>		
+	</div>
+</div>
+
+<hr>
+
+<div class="row mb-5">
+	
+	<% @custom_orders.each do |custom_order| %>
+		<% if current_user.email == custom_order.email %>	
+			
+			<div class="col-md-4 mt-3">
+				<div class="outerbox_orderlist p-3">
+					
+					<div class="row">
+						<div class="col-md-3">
+							<i class="fa fa-<%= custom_order.order_icon %>">	</i>
+						</div>
+						<div class="col-md-9 align-self-center text-right">
+							<h5>Try & Buy Date: <%= DateTime.parse(custom_order.created_at.to_s).strftime("%a %d %b %Y") %> </h5>	
+						</div>
+					</div>
+				
+					<hr>
+
+					<div class="row">
+						<div class="col-md-12">
+							<p><strong>Order Status: <%= custom_order.order_msg %> </strong></p>	
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		
+		<% end %>
+	<% end %>
+
+</div>
+
+
 <%= render 'layouts/footer' %>

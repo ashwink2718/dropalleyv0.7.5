@@ -10,12 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_22_151903) do
+ActiveRecord::Schema.define(version: 2018_09_22_163353) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
     t.string "brand_link"
     t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "custom_orders", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "street"
+    t.string "door"
+    t.string "city"
+    t.string "zipcode"
+    t.string "phone"
+    t.string "order_icon", default: "envelope-open"
+    t.string "order_msg", default: "Order Received"
+    t.string "product1"
+    t.string "size1"
+    t.string "product2"
+    t.string "size2"
+    t.string "product3"
+    t.string "size3"
+    t.string "product4"
+    t.string "size4"
+    t.string "product5"
+    t.string "size5"
+    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
