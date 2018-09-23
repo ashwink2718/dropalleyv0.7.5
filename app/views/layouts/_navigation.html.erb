@@ -18,6 +18,8 @@
 
       <% if user_signed_in? %>
 
+        <strong><%= link_to "Dashboard", dashboard_path, class: "navbar-nav nav-link links" %></strong>
+
         <%= link_to "Try & Buy Now", products_path, class: "btn btn-trial btn-lg effect-btn my-2 my-sm-0" %>
       
         <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link links" %>

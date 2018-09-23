@@ -4,6 +4,7 @@ class OrdersController < ApplicationController
 	def index
 		@orders = Order.all
 		@custom_orders = CustomOrder.all
+		@users = User.all
 	end
 
 	def new
@@ -17,7 +18,7 @@ class OrdersController < ApplicationController
 
 		if @order.update(order_params)
 			session[:cart_token] = nil
-			redirect_to root_path
+			redirect_to dashboard_path
 		else
 			redirect_to 'new'
 		end	

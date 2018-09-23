@@ -1,5 +1,5 @@
 <div class="row brands_top_margin">
-	<div align="center" class="col-md-12">
+	<div align="left" class="col-md-12">
 		<h1 class="brands_top_margin">Instant Try & Buy Orders</h1>		
 	</div>
 </div>
@@ -50,7 +50,7 @@
 </div>
 
 <div class="row">
-	<div align="center" class="col-md-12">
+	<div align="left" class="col-md-8">
 		<h1 class="brands_top_margin">Custom Try & Buy Orders</h1>		
 	</div>
 </div>
@@ -88,6 +88,26 @@
 		<% end %>
 	<% end %>
 
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+		<h1>Support</h1>
+		<hr>
+	</div>
+</div>
+
+<div class="row mb-5">
+	<div class="col-md-4">
+		<% @users.each do |user| %>
+        <% if user.id != current_user.id && user.admin? %>
+          <div align="left" class="outerbox_orderlist p-4">
+            <h4>Talk to us by clicking on the button below </h4>
+            <%= link_to "Conversations", conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post", class: "btn btn-drop btn-block btn-lg"%>
+          </div>
+      <% end %>
+     <% end %>
+	</div>
 </div>
 
 
