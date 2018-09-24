@@ -1,54 +1,53 @@
 <div class="row brands_top_margin">
-  <div class="col-md-12">
-    <h2>Messages</h2>
+  <div align="center" class="col-md-12">
+    <h2 class="mt-3">Messages</h2>
   </div>
 </div>
 
 <hr>
 
 <div class="row mb-5">
-  <div class="col-md-8">
+  <div class="col-md-10 offset-md-1">
     <% @messages.each do |message| %>
       <% if message.body %>
        
        <% user = User.find(message.user_id) %>
         
         <div class="row mt-3">
-          <div class="col-md-12">
-            <span><strong><%= user.email %> </strong></span><span><%= message.message_time %></span>
+          <div align="right" class="col-md-12">
+            <span><strong><%= user.email %> </strong></span>
           </div>
         </div>
 
         <div class="row mt-2">
           <div class="col-md-12 msg_block p-4">
             <h4><%= message.body %></h4>
+            <span class="pull-right"><%= message.message_time %></span>
           </div>
         </div>  
 
       <% end %>
-    <% end %>
+    <% end %> 
 
-    <hr>
+  </div>
+</div>
 
+<hr>
+
+<div class="row mb-5">
+  <div class="col-md-10 offset-md-1">
     <%= form_for [@conversation, @message] do |f| %>
       <div class="form-group">
-        <%= f.text_area :body, class: "form-control" %>
+        <%= f.text_area :body, class: "msg_input" %>
       </div>
       
-      <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+      <%= f.text_field :user_id, value: current_user.id, type: "hidden"%>
       
       <div class="form-group">
-        <%= f.submit "Send Message", class: "form-control btn btn-primary" %>
+        <%= f.submit "Send Message", class: "btn btn-drop btn-block btn-lg" %>
       </div>
     <% end %>
-
-
   </div>
-
-  <div class="col-md-6">
-    
-  </div>
-
 </div>
 
 <%= render 'layouts/footer' %>

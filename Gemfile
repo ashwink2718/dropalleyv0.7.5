@@ -33,6 +33,7 @@ gem "font-awesome-rails"
 gem 'rails_admin', '~> 1.3'
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'material_icons'
 
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
