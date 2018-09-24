@@ -61,14 +61,11 @@
 				<p> Start a conversation with us to get help, recommendations, and other exiting offers tailored just for you. </p>
 
 				<hr>
-
-				<% @users.each do |user| %>
-		        <% if user.id != current_user.id && user.admin? %>
-		            <%= link_to "Message Now", conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post", class: "btn btn-drop btn-block btn-lg"%>
-		      <% end %>
-		     <% end %>
+     
+		    <%= link_to "Message Now", conversations_path(sender_id: current_user.id, recipient_id: User.find_by_email("admin@dropalley.com").id), method: "post", class: "btn btn-drop btn-block btn-lg"%>
+		      
 	
-		</div>
+			</div>
 	</div>
 
 	<div class="col-md-4">

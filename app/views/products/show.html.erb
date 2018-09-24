@@ -1,8 +1,10 @@
 <div class="row brands_top_margin">
+		
 		<div class="col-md-8">
-			<%= image_tag @product.main_img.url, class: "img-fluid" %>
+			<%= image_tag @product.main_img.url, class: "img-fluid mt-3" %>
 		</div>
-		<div class="col-md-4">
+
+		<div class="col-md-4 mt-3">
 			
 			<div class="row">
 				<div class="col-md-12">
@@ -24,12 +26,14 @@
 				</div>
 			</div>
 
+			<hr>
+
 			<div class="row">
 				<div class="col-md-4">
-					<h5>Size: <%= @product.size %></h5>
+					<h5><strong> Size: <%= @product.size %></strong></h5>
 				</div>
-				<div class="col-md-8">
-					<h5>Color: <%= @product.color %></h5>
+				<div class="col-md-6 offset-md-2">
+					<h5><strong>Color: <%= @product.color %></strong></h5>
 				</div>
 			</div>	
 			
