@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 	before_action :set_product, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@products = Product.all
+		@products = Product.group(:title)
 	end
 
 	def new
@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+  	@products = Product.all
   end
 	
 	private

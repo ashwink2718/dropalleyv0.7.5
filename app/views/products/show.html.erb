@@ -68,6 +68,30 @@
 
 			<% end %>
 
+			<div class="row mt-5">
+				<div class="col-md-12">
+					<h4>Also Available In:</h4>
+				</div>
+			</div>
+
+			<% @products.each do |p| %>
+				<% if p.title == @product.title && p.id != @product.id %>
+					<div class="row mt-3">
+						<div class="col-md-12">
+							<h5><%= link_to p.title, product_path(p) %> </h5>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<h5>Size: <%= p.size %>, Color: <%= p.color %></h5>
+						</div>
+					</div>
+
+					<hr>
+				
+				<% end %>
+			<% end %>	
 		</div>
 </div>
 
