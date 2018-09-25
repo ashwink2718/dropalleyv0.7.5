@@ -1,0 +1,116 @@
+<div class="row home_top_margin">
+  <%= image_tag("1_1.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>  
+  <%= image_tag("1_3.jpg", :class => "col col-md-4 column_width_manager") %>
+  <%= image_tag("2_1.jpg", :class => "col col-md-4 column_width_manager d-none d-sm-block col-sm-4") %>
+</div>
+
+
+<div class="row">
+	<div align="center" class="col-md-12">
+		<h1 class="mt-5">Welcome to the Try & Buy Store</h1>
+	</div>
+</div>
+
+<hr>
+
+<!-- ============================ Women's Section ================================-->
+
+<div class="row">
+	<div class="col-md-12">
+		<h1 class="mt-5">Women</h1>
+	</div>
+</div>
+
+<hr>
+
+<!-- ============================ Women's Section ROW1 START ============================-->
+
+<div class="row">
+	<div class="col-md-8">
+
+		<div class="greybox2 p-4">
+			
+			<%= image_tag "cat_w_shoes.jpg", class: "col-md-12 img-fluid" %>
+			
+			<div class="row mt-3">
+				<div class="col-md-12">
+					<%= link_to "View Shoes", products_path(category: "women_shoes"), class: "btn btn-block btn-drop btn-lg" %>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="col-md-4">
+
+		<div class="greybox1 p-4">
+			<%= image_tag "cat_w_dress.jpg", class: "col-md-12 img-fluid" %>
+
+			<div class="row mt-3">
+				<div class="col-md-12">
+					<%= link_to "View Dresses", products_path(category: "women_dress"), class: "btn btn-block btn-drop btn-lg" %>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<!-- ============================ Women's Section ROW1 END ============================-->
+
+
+<!-- ============================ Women's Section ROW2 START ============================-->
+
+<div class="row mt-5 mb-5">
+	<div class="col-md-4">
+
+		<div class="greybox1 p-4">
+			<%= image_tag "cat_w_tops.jpg", class: "col-md-12 img-fluid" %>
+
+			<div class="row mt-3">
+				<div class="col-md-12">
+					<%= link_to "View Tops", products_path(category: "women_tops"), class: "btn btn-block btn-drop btn-lg" %>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="col-md-4">
+
+		<div class="greybox1 p-5">
+			<div class="row">
+				<h1>Category Image Here</h1>
+			</div>
+
+			<div class="row mt-3">
+				<div class="col-md-12">
+					<%= link_to "View Dresses", products_path(category: "women_dress"), class: "btn btn-block btn-drop btn-lg" %>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="col-md-4">
+
+		<div class="greybox1 p-5">
+			<div class="row">
+				<h1>Category Image Here</h1>
+			</div>
+
+			<div class="row mt-3">
+				<div class="col-md-12">
+					<%= link_to "View Dresses", products_path(category: "women_dress"), class: "btn btn-block btn-drop btn-lg" %>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<!-- ============================ Women's Section ROW2 END ============================-->
+
+<%= render 'layouts/footer' %>

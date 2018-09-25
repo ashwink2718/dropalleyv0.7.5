@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'pages/home'
   root 'pages#home'
+  get '/store', to: 'pages#store'
 
   get '/cart', to: 'order_items#index'
   resources :order_items, path: '/cart/items'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_23_133629) do
+ActiveRecord::Schema.define(version: 2018_09_25_122640) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(version: 2018_09_23_133629) do
     t.string "img4"
     t.string "img5"
     t.decimal "price"
+    t.string "category"
   end
 
   create_table "users", force: :cascade do |t|
