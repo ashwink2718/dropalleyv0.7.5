@@ -18,32 +18,34 @@
 
 <!-- ============================ Women's Section ROW1 START ============================-->
 
-<div class="row">
+<div class="row no-gutters">
 	<div class="col-md-8">
 
-		<div class="greybox3 p-2">
+		<div class="hovereffect">
+	
+			<%= image_tag "cat_w_shoes.jpg", class: "img-fluid" %>
 			
-			<%= image_tag "cat_w_shoes.jpg", class: "col-md-12 img-fluid" %>
-			
-			<div class="row mt-3">
-				<div class="col-md-12">
-					<%= link_to "View Shoes", products_path(category: "women_shoes"), class: "btn btn-block btn-drop btn-lg" %>
-				</div>
+			<div class="overlay">
+				<h1>Women's Shoes</h1>
+				<%= link_to "View Shoes", products_path(category: "women_shoes"), class: "info" %>
 			</div>
+	
 
 		</div>
 	</div>
 
 	<div class="col-md-4">
 
-		<div class="greybox3 p-2">
-			<%= image_tag "cat_w_dress.jpg", class: "col-md-12 img-fluid" %>
+		<div class="hovereffect">
 
-			<div class="row mt-3">
-				<div class="col-md-12">
-					<%= link_to "View Dresses", products_path(category: "women_dresses"), class: "btn btn-block btn-drop btn-lg" %>
-				</div>
+			<%= image_tag "cat_w_dress.jpg", class: "img-fluid" %>
+
+			<div class="overlay">
+					<h1>Women's Dresses</h1>
+					<%= link_to "View Dresses", products_path(category: "women_dresses"), class: "info" %>
 			</div>
+			
+		</div>
 
 		</div>
 	</div>
@@ -55,45 +57,46 @@
 
 <!-- ============================ Women's Section ROW2 START ============================-->
 
-<div class="row mt-5 mb-5">
+<div class="row mt-5 mb-5 no-gutters">
 	<div class="col-md-4">
 
-		<div class="greybox3 p-2">
-			<%= image_tag "cat_w_tops.jpg", class: "col-md-12 img-fluid" %>
+		<div class="hovereffect">
+			<%= image_tag "cat_w_tops.jpg", class: "img-fluid" %>
 
-			<div class="row mt-3">
-				<div class="col-md-12">
-					<%= link_to "View Tops", products_path(category: "women_tops"), class: "btn btn-block btn-drop btn-lg" %>
-				</div>
+			
+			<div class="overlay">
+				<h1>Women's Tops</h1>
+				<%= link_to "View Tops", products_path(category: "women_tops"), class: "info" %>
 			</div>
+			
 
 		</div>
 	</div>
 
 	<div class="col-md-4">
-		<div class="greybox3 p-2">
+		<div class="hovereffect">
 			
-			<%= image_tag "cat_w_pants.jpg", class: "col-md-12 img-fluid" %>
+			<%= image_tag "cat_w_pants.jpg", class: "img-fluid" %>
 
-			<div class="row mt-3">
-				<div class="col-md-12">
-					<%= link_to "View Pants", products_path(category: "women_pants"), class: "btn btn-block btn-drop btn-lg" %>
-				</div>
+			
+			<div class="overlay">
+				<h1>Women's Pants</h1>
+				<%= link_to "View Pants", products_path(category: "women_pants"), class: "info" %>
 			</div>
+		
 
 		</div>
 	</div>
 
 	<div class="col-md-4">
-		<div class="greybox3 p-2">
+		<div class="hovereffect">
 			
-			<%= image_tag "cat_w_skirts.jpg", class: "col-md-12 img-fluid" %>
+			<%= image_tag "cat_w_skirts.jpg", class: "img-fluid" %>
 
-			<div class="row mt-3">
-				<div class="col-md-12">
-					<%= link_to "View Skirts", products_path(category: "women_skirts"), class: "btn btn-block btn-drop btn-lg" %>
+				<div class="overlay">
+					<h1>Women's Skirts</h1>
+					<%= link_to "View Skirts", products_path(category: "women_skirts"), class: "info" %>
 				</div>
-			</div>
 
 		</div>
 	</div>
@@ -106,33 +109,35 @@
 
 <!-- ============================ Women's Section ROW3 START ============================-->
 
-<div class="row mt-5 mb-5">
+<div class="row mt-5 mb-5 no-gutters">
 
 	<div class="col-md-6">
 
-		<div class="greybox3 p-2">
-			<%= image_tag "cat_w_sweaters.jpg", class: "col-md-12 img-fluid" %>
+		<div class="hovereffect">
+			<%= image_tag "cat_w_sweaters.jpg", class: "img-fluid" %>
 
-			<div class="row mt-3">
-				<div class="col-md-12">
-					<%= link_to "View Sweaters", products_path(category: "women_sweaters"), class: "btn btn-block btn-drop btn-lg" %>
-				</div>
+			
+			<div class="overlay">
+				<h1>Women's Sweaters & Knitwear</h1>
+				<%= link_to "View Sweaters", products_path(category: "women_sweaters"), class: "info" %>
 			</div>
+		
 
 		</div>
 	</div>
 
 
 	<div class="col-md-6">
-		<div class="greybox3 p-2">
+		<div class="hovereffect">
 			
-			<%= image_tag "cat_w_jumpsuits.jpg", class: "col-md-12 img-fluid" %>
+			<%= image_tag "cat_w_jumpsuits.jpg", class: "img-fluid" %>
 
-			<div class="row mt-3">
-				<div class="col-md-12">
-					<%= link_to "View Skirts", products_path(category: "women_jumpsuits"), class: "btn btn-block btn-drop btn-lg" %>
-				</div>
+			
+			<div class="overlay">
+				<h1>Women's Jumpsuits</h1>
+				<%= link_to "View Skirts", products_path(category: "women_jumpsuits"), class: "info" %>
 			</div>
+			
 
 		</div>
 	</div>
@@ -159,32 +164,31 @@
 
 <!-- ============================ Men's Section ROW1 START ============================-->
 
-<div class="row">
+<div class="row no-gutters">
 
 	<div class="col-md-4">
 
-		<div class="greybox3 p-2">
-			<%= image_tag "cat_m_shirts.jpg", class: "col-md-12 img-fluid" %>
+		<div class="hovereffect">
+			<%= image_tag "cat_m_shirts.jpg", class: "img-fluid" %>
 
-			<div class="row mt-3">
-				<div class="col-md-12">
-					<%= link_to "View Shirts", products_path(category: "men_shirts"), class: "btn btn-block btn-drop btn-lg" %>
-				</div>
+			<div class="overlay">
+				<h1>Men's Shirts</h1>
+				<%= link_to "View Shirts", products_path(category: "men_shirts"), class: "info" %>
 			</div>
 
 		</div>
 	</div>
 
 	<div class="col-md-8">
-		<div class="greybox3 p-2">
+		<div class="hovereffect">
 			
-			<%= image_tag "cat_m_shoes.jpg", class: "col-md-12 img-fluid" %>
+			<%= image_tag "cat_m_shoes.jpg", class: "img-fluid" %>
 			
-			<div class="row mt-3">
-				<div class="col-md-12">
-					<%= link_to "View Shoes", products_path(category: "men_shoes"), class: "btn btn-block btn-drop btn-lg" %>
-				</div>
+			<div class="overlay">
+				<h1>Men's Shoes</h1>
+				<%= link_to "View Shoes", products_path(category: "men_shoes"), class: "info" %>
 			</div>
+		
 
 		</div>
 	</div>
@@ -195,31 +199,29 @@
 
 <!-- ============================ Men's Section ROW2 START ============================-->
 
-<div class="row mt-5 mb-5">
+<div class="row mt-5 mb-5 no-gutters">
 
 	<div class="col-md-6">
 
-		<div class="greybox3 p-2">
-			<%= image_tag "cat_m_sweaters.jpg", class: "col-md-12 img-fluid" %>
+		<div class="hovereffect">
+			<%= image_tag "cat_m_sweaters.jpg", class: "img-fluid" %>
 
-			<div class="row mt-3">
-				<div class="col-md-12">
-					<%= link_to "View Sweaters", products_path(category: "men_sweaters"), class: "btn btn-block btn-drop btn-lg" %>
-				</div>
+			<div class="overlay">
+				<h1>Men's Sweaters & Knitwear</h1>
+				<%= link_to "View Sweaters", products_path(category: "men_sweaters"), class: "info" %>
 			</div>
 
 		</div>
 	</div>
 
 	<div class="col-md-6">
-		<div class="greybox3 p-2">
+		<div class="hovereffect">
 			
-			<%= image_tag "cat_m_jackets.jpg", class: "col-md-12 img-fluid" %>
+			<%= image_tag "cat_m_jackets.jpg", class: "img-fluid" %>
 
-			<div class="row mt-3">
-				<div class="col-md-12">
-					<%= link_to "View Jackets", products_path(category: "men_jackets"), class: "btn btn-block btn-drop btn-lg" %>
-				</div>
+			<div class="overlay">
+				<h1>Men's Jackets</h1>
+				<%= link_to "View Jackets", products_path(category: "men_jackets"), class: "info" %>
 			</div>
 
 		</div>
