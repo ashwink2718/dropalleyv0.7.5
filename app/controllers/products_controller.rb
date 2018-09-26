@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 	before_action :set_product, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@products = Product.where("category = ?", params[:category])
+		@products = Product.where("category = ?", params[:category]).group_by(&:title)
 	end
 
 	def new
@@ -30,5 +30,3 @@ class ProductsController < ApplicationController
 	  end
 
 end
-
-
