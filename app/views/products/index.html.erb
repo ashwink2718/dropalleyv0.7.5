@@ -19,7 +19,6 @@
         	<div class="overlay">
 
           	<h2><%= product.title %></h2>
-           	<h2><%= product.description %></h2>
            	<h2>Size: <%= product.size %></h2>
            	<%= link_to "View Product", product_path(product), class:"info" %>
            	<%= link_to "Add To Cart", order_items_path(product_id: product.id, quantity:1), method: "post", class: "info" %>
