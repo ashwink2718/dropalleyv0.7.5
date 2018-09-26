@@ -6,6 +6,18 @@
 
 <hr>
 
+<div class="row mt-5 mb-5">
 
+	<% @products.each do |product| %>	
+
+		<div class="col-md-4">
+			
+	    <%= product.title %>
+
+  	</div>
+
+  <% end %>  
+
+</div>
 
 <%= render 'layouts/footer' %>
