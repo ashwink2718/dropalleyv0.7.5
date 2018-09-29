@@ -288,5 +288,5 @@ Devise.setup do |config|
   #   include Turbolinks::Controller
   # end
   config.omniauth :facebook, "388378365031772
-", "891de7d91440e25253cd11dc767fdca4", callback_url: "http://localhost:3000/users/auth/facebook/callback"
+", "891de7d91440e25253cd11dc767fdca4", callback_url: "https://www.dropalley.com/users/auth/facebook/callback"
 end
