@@ -110,20 +110,40 @@
 
 </div>
 
-<div class="row mt-5 mb-5">
-   <div class="col col-md-8 offset-md-2">
-     <div class="outerbox_signup p-5 effect1">
-       <div class="innerbox_signup">
-         <h2 align="center">Like what you see?</h2>
-         <h4 class="mb-5" align="center"> Try it on and then buy it if you like how it feels and fits. Add it to your Try & Buy request by clicking on the button below.</h4>
-         <%= form_tag order_items_path do %>
-		        <%= hidden_field_tag :product_id, @product.id %>
-		        <%= hidden_field_tag :quantity, 1 %>
-		        <%= submit_tag "Add to Cart", class:"btn btn-block btn-drop btn-lg" %>
-		      <% end %>
-       </div>
-     </div>
-   </div> 
-</div>
+<% if user_signed_in? %>
+
+	<div class="row mt-5 mb-5">
+	   <div class="col col-md-8 offset-md-2">
+	     <div class="outerbox_signup p-5 effect1">
+	       <div class="innerbox_signup">
+	         <h2 align="center">Like what you see?</h2>
+	         <h4 class="mb-5" align="center"> Try it on and then buy it if you like how it feels and fits. Add it to your Try & Buy request by clicking on the button below.</h4>
+	         <%= form_tag order_items_path do %>
+			        <%= hidden_field_tag :product_id, @product.id %>
+			        <%= hidden_field_tag :quantity, 1 %>
+			        <%= submit_tag "Add to Cart", class:"btn btn-block btn-drop btn-lg" %>
+			      <% end %>
+	       </div>
+	     </div>
+	   </div> 
+	</div>
+
+<% else %>
+
+
+	<div class="row mt-5 mb-5">
+	   <div class="col col-md-8 offset-md-2">
+	     <div class="outerbox_signup p-5 effect1">
+	       <div class="innerbox_signup">
+	         <h2 align="center">Like what you see?</h2>
+	         <h4 class="mb-5" align="center"> Try it on and then buy it if you like how it feels and fits. Add it to your Try & Buy request by clicking on the button below.</h4>
+	         <%= link_to "Sign-In To Continue", user_session_path, class: "btn btn-block btn-lg btn-drop" %>
+	       </div>
+	     </div>
+	   </div> 
+	</div>
+
+<% end %>
+
 
 <%= render 'layouts/footer' %>
