@@ -11,10 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       
 
-      <%= link_to "Shop Brands", brands_path, class: "navbar-nav ml-auto nav-link links" %>  
-      <%= link_to "Custom Try & Buy", new_custom_order_path, class: "navbar-nav nav-link links" %>
-
-      <%= link_to "How It Works", "https://www.youtube.com/watch?v=HL-NPWwXtx8", class: "nav-link links", target: "_blank" %>
+      <%= link_to "How It Works", working_path, class: "navbar-nav ml-auto nav-link links" %>
 
       <% if user_signed_in? %>
 

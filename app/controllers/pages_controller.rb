@@ -5,4 +5,8 @@ class PagesController < ApplicationController
   def store
   end
 
+  def working
+  	
+  end
+
 end
