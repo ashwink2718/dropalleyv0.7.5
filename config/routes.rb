@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/store', to: 'pages#store'
   get '/working', to: 'pages#working'
+  get '/terms', to: 'pages#terms'
 
   get '/cart', to: 'order_items#index'
   resources :order_items, path: '/cart/items'
