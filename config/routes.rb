@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/store', to: 'pages#store'
   get '/working', to: 'pages#working'
   get '/terms', to: 'pages#terms'
+  get '/cfstore', to: 'pages#cfstore'
+  get '/cfindex', to: 'pages#cfindex'
 
   get '/cart', to: 'order_items#index'
   resources :order_items, path: '/cart/items'

@@ -1,0 +1,36 @@
+<div class="row brands_top_margin">
+	<div class="col col-md-12">
+		<h1 align="center" class="mt-3">Products For Instant Try & Buy</h1>		
+	</div>
+</div>
+
+<hr>
+
+<div class="row mt-5 mb-5">
+
+	<% @products.map do |k, v| %>	
+		<% product = v[0] %>
+		<div class="col-md-4 mt-3">
+			
+	    <div class="hovereffect">
+	        
+	        <%= image_tag product.main_img.url, class: "img-fluid" %>
+
+        	<div class="overlay">
+
+          	<h2><%= product.title %></h2>
+           	<h2>Size: <%= product.size %></h2>
+           	<%= link_to "View Product", product_path(product), class:"info" %>
+           	<%= link_to "Add To Cart", order_items_path(product_id: product.id, quantity:1), method: "post", class: "info" %>
+        	
+        	</div>
+	    
+	    </div>
+
+  	</div>
+
+  <% end %>  
+
+</div>
+
+<%= render 'layouts/footer' %>

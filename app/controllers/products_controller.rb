@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 	before_action :set_product, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@products = Product.where("category = ?", params[:category]).group_by(&:title)
+		@products = Product.cat_select(params[:category]).group_by(&:title)
 	end
 
 	def new
