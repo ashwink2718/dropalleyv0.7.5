@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/store', to: 'pages#store'
   get '/working', to: 'pages#working'
   get '/terms', to: 'pages#terms'
+  get '/privacy', to: 'pages#privacy'
   get '/cfstore', to: 'pages#cfstore'
   get '/cfindex', to: 'pages#cfindex'
 

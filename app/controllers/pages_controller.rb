@@ -6,7 +6,6 @@ class PagesController < ApplicationController
   end
 
   def cfstore
-    @products = Product.cf.cat_select("women_dresses")
   end
 
   def cfindex
@@ -14,6 +13,9 @@ class PagesController < ApplicationController
   end
 
   def terms
+  end
+
+  def privacy
   end
 
   def working
